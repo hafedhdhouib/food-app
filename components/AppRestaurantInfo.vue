@@ -16,7 +16,9 @@ class="items" :style="`background: url(/${menuitem.img}) no-repeat center center
 <h4>{{menuitem.item}}</h4>
 <p>{{priceFormatting(menuitem.price)}}</p>
 </div>
-<button class="ghost">View item</button>
+<nuxt-link :to="`/item/${menuitem.id}`">
+    <button class="ghost">View item</button>
+</nuxt-link>
 </div>
 </div>
 </div>

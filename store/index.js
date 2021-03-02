@@ -1,7 +1,8 @@
-
+import{v4 as uuidv4}from 'uuid'
 
 export const state = () => ({
-  fooddata: []
+  fooddata: [],
+  cart:[]
 })
 export const actions ={
   async getFoodData({
@@ -20,5 +21,22 @@ export const actions ={
 export const mutations={
   updataData(state,payload){
      state.fooddata=payload
+  },
+  addToCart(state,pay){
+    pay.id=uuidv4()
+    state.cart.push(pay)
   }
+}
+export const getters={
+  cart(state){
+    return state.cart
+  },
+  totalproce(state){
+    if (!state.cart.length)return 0
+    return state.cart.reduce((ac,next)=>ac + +next.combinedPrice,0)
+  },cartCount: state => {
+    if (!state.cart.length) return 0;
+    return state.cart.reduce((ac, next) => ac + +next.count, 0);
+  },
+
 }
