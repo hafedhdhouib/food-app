@@ -1,7 +1,8 @@
 <template>
     <section class="masthead" role="img" aria-label="Image Description">
   <h1>
-Hello there  </h1>
+    The Hero Generator
+  </h1>
   <!--  <button>
       When a hero comes along
     </button>-->
