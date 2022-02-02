@@ -9,7 +9,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "core-js": "^3.8.3",
     "hub": "^6.1.2",
     "node-sass": "^4.14.1",
